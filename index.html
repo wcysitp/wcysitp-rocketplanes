@@ -3,7 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>RocketPlanes</title>
+        <title>quizMovie</title>
+		
+		<script type="text/javascript" src="./WebAudioPlugin/howler.min.js"></script>
+        <script type="text/javascript" src="./WebAudioPlugin/WebAudio.js"></script>
+		
         <style>
             html, body {
                 width: 100%;
@@ -134,6 +138,9 @@
 
             let bridgeOptions = {
                 platforms: {
+                    'vk_play': {
+                        gameId: '51900534'
+                    },
                 }
             }
 
@@ -151,18 +158,18 @@
                     }
 
                     let unityLoader = document.createElement('script')
-                    unityLoader.src = 'Build/RocketPlanes_build.loader.js'
+                    unityLoader.src = 'Build/game.loader.js'
                     unityLoader.onload = () => {
                         createUnityInstance(
                             canvas,
                             {
-                                dataUrl: 'Build/RocketPlanes_build.data.br',
-                                frameworkUrl: 'Build/RocketPlanes_build.framework.js.br',
-                                codeUrl: 'Build/RocketPlanes_build.wasm.br',
+                                dataUrl: 'Build/game.data.unityweb',
+                                frameworkUrl: 'Build/game.framework.js.unityweb',
+                                codeUrl: 'Build/game.wasm.unityweb',
                                 streamingAssetsUrl: 'StreamingAssets',
-                                companyName: 'DefaultCompany',
-                                productName: 'RocketPlanes',
-                                productVersion: '0.1.0',
+                                companyName: 'wcysitp',
+                                productName: 'quizMovie',
+                                productVersion: '1.0',
                                 // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
                                 // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
                             },

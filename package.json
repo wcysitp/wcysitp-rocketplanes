@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "@vkontakte/vk-miniapps-deploy": "^0.1.7"
-  },
-  "predeploy": "npm run build",
-  "deploy": "vk-miniapps-deploy",
-  "homepage": "."
-}
